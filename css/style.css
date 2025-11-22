@@ -1,0 +1,25 @@
+/* Cache le contenu au début */
+.hidden {
+    display: none;
+}
+
+/* S'assure que le loader prend tout l'écran */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Fond blanc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Assure qu'il est au-dessus de tout */
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+/* Classe pour masquer le loader après chargement */
+#loader-wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
